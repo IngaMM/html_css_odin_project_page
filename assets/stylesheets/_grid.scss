@@ -1,0 +1,88 @@
+
+
+:root {
+  --gutter-width: 20px;
+  --width: calc((100% - var(--gutter-width) * 11) / 12);
+}
+
+body {
+  margin: 0;
+}
+
+.grid-container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.row {
+  width: 100%;
+}
+
+/* Start new row */
+.row:after {
+  display: block;
+  clear: both;
+}
+
+@mixin grid-unit($span) {
+  float: left;
+  margin: 0 calc(var(--gutter-width)/2);
+  width: calc(var(--width) * #{$span} + var(--gutter-width) * (#{$span} - 1));
+}
+
+.grid_1 {
+  @include grid-unit(1);
+}
+
+.grid_2 {
+  @include grid-unit(2);
+}
+
+.grid_3 {
+  @include grid-unit(3);
+}
+
+.grid_4 {
+  @include grid-unit(4);
+}
+
+.grid_5 {
+  @include grid-unit(5);
+}
+
+.grid_6 {
+  @include grid-unit(6);
+}
+
+.grid_7 {
+  @include grid-unit(7);
+}
+
+.grid_8 {
+  @include grid-unit(8);
+}
+
+.grid_9 {
+  @include grid-unit(9);
+}
+
+.grid_10 {
+  @include grid-unit(10);
+}
+
+.grid_11 {
+  @include grid-unit(11);
+}
+
+.grid_12 {
+  @include grid-unit(12);
+}
+
+.alpha {
+  margin-left: 0;
+}
+
+.omega {
+  margin-right: 0;
+}
